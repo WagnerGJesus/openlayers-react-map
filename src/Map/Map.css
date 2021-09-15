@@ -17,3 +17,8 @@
     top: .5em;
     right: .5em;
 }
+
+.ol-scale-line {
+    background: black;
+    padding: 5px;
+  }

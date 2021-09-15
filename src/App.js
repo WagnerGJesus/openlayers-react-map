@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import './App.css';
 import Map from "./Map";
@@ -6,7 +7,8 @@ import { Circle as CircleStyle, Fill, Stroke, Style } from 'ol/style';
 import { osm, vector } from "./Source";
 import { fromLonLat, get } from 'ol/proj';
 import GeoJSON from 'ol/format/GeoJSON';
-import { Controls, FullScreenControl } from "./Controls";
+import { Controls, FullScreenControl, ZoomControl,ZoomSliderControl } from "./Controls";
+
 
 let styles = {
 	'Point': new Style({
@@ -189,6 +191,8 @@ const App = () => {
 				</Layers>
 				<Controls>
 					<FullScreenControl />
+					<ZoomControl/>
+					<ZoomSliderControl/>
 				</Controls>
 			</Map>
 			<div>

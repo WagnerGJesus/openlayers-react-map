@@ -1,0 +1,35 @@
+/* div.ol-zoom.ol-unselectable.ol-control {
+  pointer-events: auto;
+  display: grid;
+  position: inherit;
+  bottom: 25px;
+  background-color: blue;
+} */
+
+#map .ol-zoomslider {
+  background-color: transparent;
+  /*
+  Zoom control top: 0.5em
+  Zoom control padding: 2px
+  Zoom in button margin top: 1px
+  Zoom in button height: font size 1.14em * 1.375 height
+  */
+  top: calc(0.5em + 2px + 1px + 1.14 * 1.375em);
+}
+
+#map .ol-touch .ol-zoom .ol-zoom-out {
+  margin-top: 212px;
+}
+#map .ol-touch .ol-zoomslider {
+  top: 2.75em;
+}
+
+#map .ol-zoom-in.ol-has-tooltip:hover [role=tooltip],
+#map .ol-zoom-in.ol-has-tooltip:focus [role=tooltip] {
+  top: 3px;
+}
+
+#map .ol-zoom-out.ol-has-tooltip:hover [role=tooltip],
+#map .ol-zoom-out.ol-has-tooltip:focus [role=tooltip] {
+  top: 232px;
+}

@@ -21,21 +21,21 @@ const Map = ({ children, zoom, center }) => {
 		setMap(mapObject);
 
 		return () => mapObject.setTarget(undefined);
-	}, []);
+	}, [center, zoom]);
 
 	// zoom change handler
 	useEffect(() => {
 		if (!map) return;
 
 		map.getView().setZoom(zoom);
-	}, [zoom]);
+	}, [map, zoom]);
 
 	// center change handler
 	useEffect(() => {
 		if (!map) return;
 
 		map.getView().setCenter(center)
-	}, [center])
+	}, [center, map])
 
 	return (
 		<MapContext.Provider value={{ map }}>

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from "react";
 import { FullScreen } from "ol/control";
 import MapContext from "../Map/MapContext";
@@ -9,10 +10,13 @@ const FullScreenControl = () => {
 		if (!map) return;
 
 		let fullScreenControl = new FullScreen({});
+		
 
 		map.controls.push(fullScreenControl);
+		
 
-		return () => map.controls.remove(fullScreenControl);
+		return () =>  map.controls.remove(fullScreenControl);
+	
 	}, [map]);
 
 	return null;

@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import './App.css';
-import Map from "./Map";
-import { Layers, TileLayer, VectorLayer } from "./Layers";
 import { Circle as CircleStyle, Fill, Stroke, Style } from 'ol/style';
-import { osm, vector } from "./Source";
 import { fromLonLat, get } from 'ol/proj';
 import GeoJSON from 'ol/format/GeoJSON';
-import { Controls, FullScreenControl, ZoomControl,ZoomSliderControl } from "./Controls";
+import './App.css';
+import Map from "./components/Map";
+import { osm, vector } from "./components/Source";
+import { Layers, TileLayer, VectorLayer } from "./components/Layers";
+import { Controls, FullScreenControl, ZoomControl,ZoomSliderControl } from "./components/Controls";
 
 
 let styles = {
